@@ -1,0 +1,29 @@
+<!DOCTYPE HTML>
+<html>
+    <head>
+        <title>One to Thousand</title>
+        <script src="Utilities.js"></script>
+        <script>
+                function initialize(){
+                    lineCount = "";
+                    Line = "";
+                    newIteration();
+                }
+    
+                function newIteration(){
+                    for (i=1, text = ""; i<1001; i++){
+                        String(lineCount);
+                        lineCount = i + getOrdinalSuffix(i) + " place";
+                        text += lineCount + "<br>";
+                        document.getElementById("write_box").innerHTML = text;
+                    }
+                }
+        </script>
+        <style></style>
+    </head>
+    <body onload="initialize();">
+        <div id="write_box">
+
+        </div>
+    </body>
+</html>
